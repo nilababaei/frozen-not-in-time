@@ -1,3 +1,33 @@
 html {
   font-family: "Fredoka One", cursive;
 }
+
+banner {
+  background: repeating-linear-gradient(
+  -30deg,
+  #b3fbff,
+  #c9fcff 15px,
+  #d4fdff 15px
+  );
+}
+
+.title {
+  color: #990073;
+}
+
+p, a {
+  color: #c09;
+  text-decoration: none;
+}
+
+p {
+  max-width: 19em;
+}
+
+.btn {
+  border-color: #990073;
+}
+
+.btn:hover {
+  border-color: #990073;
+}
