@@ -3,17 +3,15 @@ html {
 }
 
 main {
-  background:
-    repeating-linear-gradient(
-      -30deg,
-      #b3fbff,
-      #c9fcff 20px,
-      #d4fdff 20px);
+  background: repeating-linear-gradient(-30deg, #b3fbff, #c9fcff 20px, #d4fdff 20px);
+  min-height: 500px;
+  max-height: 500px;
 }
 
 .title {
   color: #990073;
-  transform: rotate(-10deg);
+  transform: rotate(-8deg);
+  margin-left: -15px;
 }
 
 p, a {
@@ -41,19 +39,130 @@ p {
 .text-box {
   transform-origin: left center;
   padding-left: 6%;
+  animation: fading 4500ms linear;
 }
 
-.text-box:hover {
-  animation: fade-in 6s linear;
-}
-@@keyframes fade-in {
+@keyframes fading {
 
-  start {
-    opacity: 0%;
+  0% {
+    -webkit-filter: opacity(0);
   }
 
-  end {
-    opacity: 100%;
+  50% {
+    -webkit-filter: opacity(0);
+  }
+
+  100% {
+    -webkit-filter: opacity(1);
+    filter: blur(1px);
+  }
+
+}
+
+.image-frame {
+  min-height: 480px;
+}
+
+.cone {
+  transform: scale(.7);
+  bottom: -23px;
+  right: 35px;
+  animation: cone-drop 500ms linear;
+}
+
+.mint-chip {
+  bottom: 100%;
+  right: 35px;
+  transform: scale(.7);
+  animation: mint-drop 500ms forwards linear 500ms;
+
+  /*  name duration property easing delay */
+}
+
+.chocolate-chip {
+  bottom: 100%;
+  right: 30px;
+  transform: scale(.7);
+  z-index: 1;
+  animation: chocolate-drop 500ms forwards linear 1000ms;
+}
+
+.vanilla-fudge {
+  bottom: 100%;
+  right: 35px;
+  transform: scale(.7);
+  z-index: 2;
+  animation: fudge-drop 500ms forwards linear 1500ms;
+}
+
+.cherry {
+  bottom: 100%;
+  right: 35px;
+  transform: scale(.7);
+  z-index: 3;
+  animation: cherry-drop 500ms forwards linear 2000ms;
+}
+
+@keyframes cone-drop {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 12px;
+  }
+
+}
+
+@keyframes mint-drop {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 82px;
+    opacity: 1;
+  }
+
+}
+
+@keyframes chocolate-drop {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 165px;
+    opacity: 1;
+  }
+
+}
+
+@keyframes fudge-drop {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 240px;
+    opacity: 1;
+  }
+
+}
+
+@keyframes cherry-drop {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 325px;
+    opacity: 1;
   }
 
 }
